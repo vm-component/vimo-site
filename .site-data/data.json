@@ -1,12 +1,11 @@
 {
-  "name": "nuxt-demo",
+  "name": "nuxt",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "向松涛 <280304286@163.com>",
   "private": true,
   "scripts": {
-    "dev": "PORT=3000 nuxt",
-    "data": "node ./site/data",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -14,20 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@vue/web-component-wrapper": "^1.2.0",
-    "node-sass": "^4.8.3",
-    "nuxt": "^1.0.0",
-    "qrcode.vue": "^1.6.0",
-    "remark-frontmatter": "^1.2.0",
-    "remark-html": "^7.0.0",
-    "remark-parse": "^5.0.0",
-    "remark-stringify": "^5.0.0",
-    "sass-loader": "^7.0.1",
-    "to-vfile": "^2.2.0",
-    "unified": "^6.1.6",
-    "url-parse": "^1.4.0",
-    "vfile-reporter": "^4.0.0",
-    "vue-i18n": "^7.6.0"
+    "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

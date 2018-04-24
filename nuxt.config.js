@@ -30,8 +30,11 @@ module.exports = {
   srcDir: 'site/',
   /*
    ** Build configuration
+   * 对webpack/babel等配置修改拓展
    */
   build: {
+    // Nuxt.js 使用 webpack-bundle-analyzer 分析并可视化构建后的打包文件，你可以基于分析结果来决定如何优化它。
+    analyze: true,
     /*
      ** Run ESLint on save
      */

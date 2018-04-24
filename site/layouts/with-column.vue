@@ -1,5 +1,24 @@
 <template>
     <div>
+        <header class="Header">
+            <div class="container">
+                <h1 class="Header__Title">Nuxt i18n</h1>
+                <nav class="Header__Menu">
+                    <nuxt-link class="Header__Link" to="index" exact>
+                        {{ $t('links.home') }}
+                    </nuxt-link>
+                    <nuxt-link class="Header__Link" to="about" exact>
+                        {{ $t('links.about') }}
+                    </nuxt-link>
+                    <!--<nuxt-link class="Header__Link" v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" active-class="none" exact>-->
+                    <!--{{ $t('links.french') }}-->
+                    <!--</nuxt-link>-->
+                    <!--<nuxt-link class="Header__Link" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none" exact>-->
+                    <!--{{ $t('links.english') }}-->
+                    <!--</nuxt-link>-->
+                </nav>
+            </div>
+        </header>
         <nuxt/>
     </div>
 </template>
