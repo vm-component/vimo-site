@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "data": "node ./site/data",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -13,7 +14,20 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "@vue/web-component-wrapper": "^1.2.0",
+    "node-sass": "^4.8.3",
+    "nuxt": "^1.0.0",
+    "qrcode.vue": "^1.6.0",
+    "remark-frontmatter": "^1.2.0",
+    "remark-html": "^7.0.0",
+    "remark-parse": "^5.0.0",
+    "remark-stringify": "^5.0.0",
+    "sass-loader": "^7.0.1",
+    "to-vfile": "^2.2.0",
+    "unified": "^6.1.6",
+    "url-parse": "^1.4.0",
+    "vfile-reporter": "^4.0.0",
+    "vue-i18n": "^7.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
