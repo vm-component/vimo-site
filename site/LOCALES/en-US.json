@@ -1,4 +1,9 @@
 {
+  "index": {
+    "desc": "A Vue2.x UI Project For Mobile & HyBrid",
+    "github": "Github",
+    "guide": "Guide"
+  },
   "links": {
     "home": "Home",
     "about": "About",

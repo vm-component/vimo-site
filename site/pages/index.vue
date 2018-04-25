@@ -1,5 +1,5 @@
 <script>
-  import Index from './_LANG/index'
+  import Index from './_lang/index'
 
   export default Index
 </script>

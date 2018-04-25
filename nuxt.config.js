@@ -2,6 +2,9 @@ module.exports = {
   /*
    ** Headers of the page
    */
+  css:[
+    'normalize.css'
+  ],
   head: {
     title: 'nuxt-demo',
     meta: [

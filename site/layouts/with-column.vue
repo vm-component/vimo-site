@@ -4,7 +4,7 @@
             <div class="container">
                 <h1 class="Header__Title">Nuxt i18n</h1>
                 <nav class="Header__Menu">
-                    <nuxt-link class="Header__Link" to="index" exact>
+                    <nuxt-link class="Header__Link" :to="$i18n.path('')" exact>
                         {{ $t('links.home') }}
                     </nuxt-link>
                     <nuxt-link class="Header__Link" to="about" exact>
@@ -17,6 +17,11 @@
                     <!--{{ $t('links.english') }}-->
                     <!--</nuxt-link>-->
                 </nav>
+
+                <div class="switcher">
+                    <span v-if="currentLocale!=='en-US'" @click="switchLang('en-US')">English</span>
+                    <span v-if="currentLocale!=='zh-CN'" @click="switchLang('zh-CN')">中文</span>
+                </div>
             </div>
         </header>
         <nuxt/>
@@ -24,7 +29,33 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    data () {
+      return {
+        current: ''
+      }
+    },
+    computed: {
+      currentLocale () {
+        return this.$store.state.locale
+      }
+    },
+    methods: {
+      switchLang (lang) {
+        const currentLocate = this.$store.state.locale
+        if (currentLocate === lang) return
+
+        const currentFullPath = this.$route.fullPath
+        const formatPath = currentFullPath.replace(`/${currentLocate}`, '')
+
+        if (lang === this.$i18n.fallbackLocale) {
+          window.location.href = formatPath
+        } else {
+          window.location.href = `/${lang}${formatPath}`
+        }
+      }
+    }
+  }
 </script>
 
 <style>

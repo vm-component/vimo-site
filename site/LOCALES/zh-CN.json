@@ -1,4 +1,9 @@
 {
+  "index": {
+    "desc": "使用Vue2.x开发的移动端组件库",
+    "github": "Github",
+    "guide": "组件说明"
+  },
   "links": {
     "home": "首页",
     "about": "关于",

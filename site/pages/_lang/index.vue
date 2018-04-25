@@ -6,18 +6,18 @@
             </div>
             <h1 class="content__title">Vimo</h1>
             <p>v 2.0.0</p>
-            <p>A Vue2.x UI Project For Mobile & HyBrid</p>
+            <p>{{$t('index.desc')}}</p>
             <!--<strong>LANG: {{this.$route.params.LANG}}</strong>-->
             <div class="content__lang">
-                <span @click="switchLang('zh-CN')" :class="{active: this.$store.state.locale === 'zh-CN'}">中文</span>
-                <span @click="switchLang('en-US')" :class="{active: this.$store.state.locale === 'en-US'}">English</span>
+                <nuxt-link :to="$i18n.path('/zh-CN')" :class="{active: this.$store.state.locale === 'zh-CN'}">中文</nuxt-link>
+                <nuxt-link :to="$i18n.path('/en-US')" :class="{active: this.$store.state.locale === 'en-US'}">English</nuxt-link>
             </div>
             <div class="content__btns">
-                <nuxt-link class="btn" to="" exact>
-                    Github
+                <nuxt-link :to="$i18n.path('about')" exact>
+                    {{$t('index.github')}}
                 </nuxt-link>
-                <nuxt-link class="btn" to="about" exact>
-                    Guide
+                <nuxt-link :to="$i18n.path('/about')" exact>
+                    {{$t('index.guide')}}
                 </nuxt-link>
             </div>
         </div>
@@ -58,8 +58,8 @@
     }
 
     .content__lang {
-        padding: 30px 0 0 0;
-        span {
+        padding: 20px 0 0 0;
+        a, a:active {
             font-size: 14px;
             padding: 0 10px;
             line-height: 30px;
@@ -68,30 +68,34 @@
             width: 70px;
             box-sizing: border-box;
             transition: all ease 300ms;
+            /*color: #000;*/
         }
-        span.active {
+
+        a.active {
             color: $theme-color;
         }
-        span:hover {
+
+        a:hover {
             color: $theme-color;
         }
     }
 
     .content__btns {
-        padding: 60px 0 0 0;
-        .btn {
-            padding: 0 10px;
+        padding: 30px 0 0 0;
+        a, a:active {
+            padding: 2px 20px;
             line-height: 30px;
+            color: $theme-color;
             display: inline-block;
             margin: 0 10px;
             border-radius: 30px;
             border: 1px solid $theme-color;
             cursor: pointer;
-            width: 80px;
             box-sizing: border-box;
             transition: all ease 300ms;
+            text-decoration: none;
         }
-        .btn:hover {
+        a:hover {
             background: $theme-color;
             color: #fff;
         }

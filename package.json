@@ -16,6 +16,7 @@
   "dependencies": {
     "@vue/web-component-wrapper": "^1.2.0",
     "node-sass": "^4.8.3",
+    "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
     "qrcode.vue": "^1.6.0",
     "remark-frontmatter": "^1.2.0",
